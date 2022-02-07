@@ -1,6 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Dongle);
+
 * {
     user-select: none;
-    font-family: Dongle;
+    font-family: 'Dongle',serif;
     font-size: 22px;
 }
 
