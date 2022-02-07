@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/my-logo/favicon.ico">
+    <link rel="icon" type="image/gif" href="/my-logo/animated_favicon1.gif">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chess Board</title>
+</head>
+<body>
+    <header>
+        <p class="title">
+            Scholar's Mate Tutorial
+        </p>
+
+        <p class="instr">
+            Instructions
+        </p>
+
+        <button class="shw" onclick="dropdown()">
+            Show
+        </button>
+
+        <div id="list" class="drp">
+            <p>
+                Click the Start button
+            </p>
+            <p>
+                Click the highlighted piece
+            </p>
+            <p>
+                The piece will go to the highlighted position
+            </p>
+            <p>
+                Reset when you win and whenever you like
+            </p>
+        </div>
+    </header>
+
+    <div class="chess-message">
+        <p id="win" class="notYet white-wins check-mate-message fade-in">
+            CHECKMATE
+        </p>
+    </div>
+    
+    <div id="" class="board">
+        <div class="cell cell-white"><img class="piece" src="/john-pablok-cburnett-chess-assets/b_rook_svg_NoShadow.svg" alt="black rook"></div>
+        <div class="cell cell-black"><img id="bkn1" class="piece" src="/john-pablok-cburnett-chess-assets/b_knight_svg_NoShadow.svg" alt="black knight"></div>
+        <div class="cell cell-white"><img class="piece" src="/john-pablok-cburnett-chess-assets/b_bishop_svg_NoShadow.svg" alt="black bishop"></div>
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/b_queen_svg_NoShadow.svg" alt="black queen"></div>
+        <div class="cell cell-white"><img class="piece" src="/john-pablok-cburnett-chess-assets/b_king_svg_NoShadow.svg" alt="black king"></div>
+        <div class="cell cell-black"><img id="bb2" class="piece" src="/john-pablok-cburnett-chess-assets/b_bishop_svg_NoShadow.svg" alt="black bishop"></div>
+        <div class="cell cell-white"><img class="piece" src="/john-pablok-cburnett-chess-assets/b_knight_svg_NoShadow.svg" alt="black knight"></div>
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/b_rook_svg_NoShadow.svg" alt="black rook"></div>
+        
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/b_pawn_svg_NoShadow.svg" alt="black pawn"></div>
+        <div class="cell cell-white"><img class="piece" src="/john-pablok-cburnett-chess-assets/b_pawn_svg_NoShadow.svg" alt="black pawn"></div>
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/b_pawn_svg_NoShadow.svg" alt="black pawn"></div>
+        <div class="cell cell-white"><img class="piece" src="/john-pablok-cburnett-chess-assets/b_pawn_svg_NoShadow.svg" alt="black pawn"></div>
+        <div class="cell cell-black"><img id="bp5" class="piece" src="/john-pablok-cburnett-chess-assets/b_pawn_svg_NoShadow.svg" alt="black pawn"></div>
+        <div id="moveto-7" class="cell cell-white"><img id="bp6" class="piece" src="/john-pablok-cburnett-chess-assets/b_pawn_svg_NoShadow.svg" alt="black pawn"></div>
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/b_pawn_svg_NoShadow.svg" alt="black pawn"></div>
+        <div class="cell cell-white"><img class="piece" src="/john-pablok-cburnett-chess-assets/b_pawn_svg_NoShadow.svg" alt="black pawn"></div>
+        
+        <div class="cell cell-white"></div>
+        <div class="cell cell-black"></div>
+        <div id="moveto-4" class="cell cell-white"></div>
+        <div class="cell cell-black"></div>
+        <div class="cell cell-white"></div>
+        <div class="cell cell-black"></div>
+        <div class="cell cell-white"></div>
+        <div class="cell cell-black"></div>
+
+        <div class="cell cell-black"></div>
+        <div class="cell cell-white"></div>
+        <div id="moveto-6" class="cell cell-black"></div>
+        <div class="cell cell-white"></div>
+        <div id="moveto-2" class="cell cell-black"></div>
+        <div class="cell cell-white"></div>
+        <div class="cell cell-black"></div>
+        <div class="cell cell-white"></div>
+        
+        <div class="cell cell-white"></div>
+        <div class="cell cell-black"></div>
+        <div id="moveto-5" class="cell cell-white"></div>
+        <div class="cell cell-black"></div>
+        <div id="moveto-1" class="cell cell-white"></div>
+        <div class="cell cell-black"></div>
+        <div class="cell cell-white"></div>
+        <div class="cell cell-black"></div>
+        
+        <div class="cell cell-black"></div>
+        <div class="cell cell-white"></div>
+        <div class="cell cell-black"></div>
+        <div class="cell cell-white"></div>
+        <div class="cell cell-black"></div>
+        <div id="moveto-3" class="cell cell-white"></div>
+        <div class="cell cell-black"></div>
+        <div class="cell cell-white"></div>
+        
+        <div class="cell cell-white"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_pawn_svg_NoShadow.svg" alt="white pawn"></div>
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_pawn_svg_NoShadow.svg" alt="white pawn"></div>
+        <div class="cell cell-white"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_pawn_svg_NoShadow.svg" alt="white pawn"></div>
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_pawn_svg_NoShadow.svg" alt="white pawn"></div>
+        <div class="cell cell-white"><img id="wp5" class="piece" src="/john-pablok-cburnett-chess-assets/w_pawn_svg_NoShadow.svg" alt="white pawn"></div>
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_pawn_svg_NoShadow.svg" alt="white pawn"></div>
+        <div class="cell cell-white"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_pawn_svg_NoShadow.svg" alt="white pawn"></div>
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_pawn_svg_NoShadow.svg" alt="white pawn"></div>
+        
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_rook_svg_NoShadow.svg" alt="white rook"></div>
+        <div class="cell cell-white"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_knight_svg_NoShadow.svg" alt="white knight"></div>
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_bishop_svg_NoShadow.svg" alt="white bishop"></div>
+        <div class="cell cell-white"><img id="wq" class="piece" src="/john-pablok-cburnett-chess-assets/w_queen_svg_NoShadow.svg" alt="white queen"></div>
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_king_svg_NoShadow.svg" alt="white king"></div>
+        <div class="cell cell-white"><img id="wb2" class="piece" src="/john-pablok-cburnett-chess-assets/w_bishop_svg_NoShadow.svg" alt="white bishop"></div>
+        <div class="cell cell-black"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_knight_svg_NoShadow.svg" alt="white knight"></div>
+        <div class="cell cell-white"><img class="piece" src="/john-pablok-cburnett-chess-assets/w_rook_svg_NoShadow.svg" alt="white rook"></div>
+    </div>
+
+    <section class="play">
+        <button id="strt" class="btn">Start</button>
+        <button class="btn" onclick="reset()">Reset</button>
+    </section>
+
+    <div class="loader">
+        <div class="screen"></div>
+        <div class="my-logo">
+            <img id="my-logo" src="/my-logo/My Logo.png" alt="my logo">
+        </div>
+        <div class="load-text">
+            Loading...
+        </div>
+    </div>
+<script src="scripts.js"></script>
+</body>
+</html>
